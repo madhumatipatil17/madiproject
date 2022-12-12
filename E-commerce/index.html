@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Mobiles,laptops">
+    <meta name="author" content="madhivanan">
+    <meta http-equiv="refresh" content="50">
+
+    <title>MERFOR</title>
+    <link rel="icon" href="./Assets/image/logo.png">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstarp 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!--  Animate on scroll library css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header">
+        <a href="#"><img src="./Assets/image/logo.png" alt="logo" height="50px"></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="./shopItem/shopItem.html">Shop</a></li>
+                <li><a href="./About/about.html">About</a></li>
+                <li><a href="./contact/contact.html">Contact</a></li>
+                <li><a href="./cart/cart.html"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                    <div id="cartAmount" class="cartAmount">0</div>
+                </li>
+
+                <!-- user profile dropdown -->
+                <div class="nav-item dropdown " id="userProfile">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" style="color: white">
+                        <img src="./Assets/image/avatar.png" width="40" height="40" class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item myorder" href="./myorders/myOrders.html">My orders</a></li>
+                        <li><a class="dropdown-item  logoutBtn" href="#" onClick="logOut() " id="logoutBtn">logOut</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <li><button data-bs-target="#loginRegister" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-whatever="@mdo" id="loginBtn" class="login">Login</button></li>
+                <span id="user" class="user"></span>
+
+                <li>
+                    <div id="search-container">
+                        <input type="search" id="search-input" placeholder="Search" onkeyup="seacrhProducts()"
+                            class="form-control" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="toggler">
+            <i id="bar" class="fas fa-outdent" style="color: aliceblue;"></i>
+
+        </div>
+    </header>
+
+
+    <!-- slider -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Assets/image/POCO-F4-GT-Banner-en.jpg" class="d-block w-100 " alt="..." height="495px">
+            </div>
+            <div class="carousel-item">
+                <img src="./Assets/image/tvsredmi.png" class="d-block w-100" alt="..." height="495px">
+            </div>
+            <div class="carousel-item">
+                <img src="./Assets/image/redmiMobile.jpg" class="d-block w-100" alt="..." height="495px">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- features -->
+    <div id="features" class="section-p1">
+        <div class="fe-box">
+            <img src="./Assets/image/free-shipping.png" alt="" width="50%" height="90px">
+            <h6>Free shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="./Assets/image/onlineOrder.jpeg" alt="" width="50%" height="90px">
+            <h6>Online Order</h6>
+        </div>
+         <div class="fe-box">
+            <img src="./Assets/image/happySale.jpeg" alt="" width="50%">
+            <h6>Happy Sale</h6>
+        </div>
+       <!-- <div class="fe-box">
+            <img src="./Assets/image/saveMoney.jpeg" alt="" width="50%">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="./Assets/image/Promotion.jpeg" alt="" width="50%">
+            <h6>Promotion</h6>
+        </div>
+        <div class="fe-box">
+            <img src="./Assets/image/support.png" alt="" width="50%" height="76px">
+            <h6>27x7 support</h6>
+        </div> -->
+    </div>
+
+    <!-- Featured Products -->
+    <div id="product1" class="section-p1">
+        <h2>Best sellers</h2>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, sequi?</p> -->
+        <div class="pro-container" id="product22">
+
+        </div>
+
+
+    </div>
+
+    <!-- banner -->
+    <div id="banner" class="section-m1">
+        <h4>Services</h4>
+        <h2>Up to <span> 10% off </span> - All Accessories</h2>
+    </div>
+
+
+
+
+    <!-- Small Banners -->
+
+    <div id="sm-banner" class="section-p1">
+        <div class="banner-box" data-aos="flip-left" data-aos-easing="ease-in-cubic" data-aos-duration="1400">
+            <h4>Crazy deals</h4>z
+            <h2>Buy 1 get 1 free</h2>
+            <span>Crazy Deals app now offers you the power of shopping  & that all too ...</span>
+            <!-- <button class="white">learn more</button> -->
+        </div>
+
+        <div class="banner-box banner-box2" data-aos="flip-left" data-aos-easing="ease-in-cubic"
+            data-aos-duration="1400">
+            <h4>Crazy deals</h4>
+            <h2>New launch </h2>
+            <span>Get the best mobile phone offers from popular brands such as Samsung!</span>
+            <!-- <button class="white">learn more</button> -->
+        </div>
+    </div>
+
+    <div id="sm-banner2" style="width: 90%;margin: auto; margin-bottom: 10px;">
+        <div class="banner-box" data-aos="zoom-out-up" data-aos-delay="70">
+            <h2>Mobiles</h2>
+        
+
+        </div>
+        <div class="banner-box banner-box2 " data-aos="zoom-out-up" data-aos-delay="250">
+            <h2>LapTops</h2>
+         
+        </div>
+        <div class="banner-box banner-box3" data-aos="zoom-out-up" data-aos-delay="400">
+            <h2>Gaming</h2>
+       
+        </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="section-p1" id="footer">
+        <div class="col">
+            <a href="./index.html"> <img class="logo" src="./Assets/image/logo.png" alt="brandlogo" height="70px"></a>
+            <h4>Contact</h4>
+            <p><strong>Address</strong> 164 Sheffield St. Michigan City, IN 46360</p>
+            <p><strong>Phone:</strong>8028-2939-22</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div><br>
+            <p> &reg; All Rights Reserved</p>
+        </div>
+        
+        <div class="col">
+            <h4>About</h4>
+            <a href="./About/about.html">About us</a>
+            <a href="./contact/contact.html"> Contact us</a>
+            <a href="./feedback/feedback.html"> Feedback</a>
+
+        </div>
+
+        <div class="col" id="userAccount">
+            <h4>My account</h4>
+            <a href="./cart/cart.html">Cart</a>
+            <a href="./myorders/myOrders.html">My Order</a>
+       
+        </div>
+
+        <div class="col i">
+            <h4>payment</h4>
+            <img src="./Assets/image/payment.png" alt="">
+
+        </div>
+
+    </footer>
+
+    <!-- Login modal -->
+    <div class="modal fade" tabindex="-1" id="loginRegister">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+            <div class="modal-content" style="padding-bottom: 58px;">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="form-box">
+                            <div class="button-box" id="button-box">
+                                <div id="btn1"></div>
+                                <button type="button" class="toggle-btn" onclick="login()">Log in</button>
+                                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+
+                            </div>
+                            <div class="social-icons" id="social-icons">
+                                <i class="fab fa-facebook"></i>
+                                <i class="fab fa-youtube"></i>
+                                <i class="fab fa-twitter"></i>
+                            </div>
+
+                            <form class="input-group" id="login" autocomplete="off" action="./index.html">
+                                <div>
+                                    <input type="text" class="input-field" placeholder=" E-mail Address "
+                                        id="loginEmail">
+                                    <div id="emailError" class="error"></div>
+                                </div>
+                                <div>
+                                    <input type="password" class="input-field" placeholder="Password "
+                                        id="loginPassword">
+                                    <div id="passError" class="error"></div>
+                                </div>
+                                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                                <br>
+                                <a onclick="forgetForm()">Forgot passowrd?</a>
+                                <div>
+                                    <input type="submit" class="submit-btn" id="submit"
+                                        style="border-radius: 20px; margin-left: 30px;" value="Log in" />
+                                </div>
+                            </form>
+                            <form action="" class="input-group" id="register">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <input type="text" class="input-field" placeholder="Name" id="name">
+                                        <div id="nameErr" class="error"></div>
+                                    </div>
+                                    <div style="margin-left: 10px;">
+                                        <input type="text" class="input-field" placeholder="E-mail Address" id="email">
+                                        <div id="emailErr" class="error"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <input type="password" class="input-field" placeholder="Password " id="password">
+                                    <div id="passErr" class="error"></div>
+                                </div>
+                                <div>
+                                    <input type="password" class="input-field" placeholder="Confirm Password "
+                                        id="confirmPassword">
+                                    <div id="confirmPassErr" class="error"></div>
+                                </div>
+                                <input type="checkbox" class="check-box"><span>I agree to the terms & condition</span>
+                                <input type="submit" id="regSubmit" class="submit-btn"
+                                    style="border-radius: 20px; margin-left: 30px;" value="Register" />
+                            </form>
+
+
+                            <!-- forget password -->
+                            <form action="" class="forgetForm" id="forgetForm">
+                                <div>
+                                    <h5>Forget password </h5>
+                                </div>
+                                <div>
+                                    <input type="text" class="input-field" placeholder=" E-mail Address "
+                                        id="ForgetEmail">
+                                    <div id="ForgetemailError" class="error"></div>
+                                </div>
+                                <div>
+                                    <input type="button" class="btn btn-primary" id="subForget" value="submit"
+                                        data-bs-toggle="modal" data-bs-target="#forgetform" data-bs-whatever="@mdo">
+
+                                </div>
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- forgetForm Submition -->
+
+    <div class="modal fade" id="forgetform" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="feedbackModal">
+                        <h1>Successfully send to OTP in yor account </h1>
+                        <div> <i class="fa-solid fa-circle-check"></i></div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!-- Bootstarp 5  script -->
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+                    crossorigin="anonymous"></script>
+
+
+
+
+
+                <!-- jquery -->
+                <script src="https://code.jquery.com/jquery-3.6.0.js"
+                    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+                <!-- Animate on scroll library js -->
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+                <script>
+                    $(document).ready(function () {
+                        AOS.init();
+                    })
+                </script>
+
+                <!-- javaScript -->
+                <script src="./Assets/db/data.js"></script>
+                <script src="./Assets/js/script.js"></script>
+                <script src="./Assets/js/product.js"></script>
+
+</body>
+
+</html>

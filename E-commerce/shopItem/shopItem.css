@@ -1,0 +1,32 @@
+.product-header
+
+{
+    display: flex;
+    border-bottom: 1px solid;
+    margin-bottom: -20px;
+}
+.hide {
+    display: none;
+  }
+
+  #search-container {
+      /* width: 100%; */
+      float: right;
+  }
+
+
+  @media (max-width: 799px){
+  #product1 .pro {
+      margin-top: 33px;
+  }
+}
+
+  @media (max-width: 477px){
+#product1 .pro {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 0px;
+}
+  }
+
+

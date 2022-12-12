@@ -1,0 +1,140 @@
+.form-section{
+    /* background:url("../Assets/image/free-shipping.png"); */
+    background:linear-gradient(to left, rgb(255, 197, 197),rgb(157, 240, 255));
+
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.feedbackBox{
+background: #fff;
+padding: 50px 100px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 100px;
+}
+
+.emoji{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    overflow: hidden;
+
+}
+#iemoji {
+    display: flex;
+    align-items: center;
+    transform:translateX(-400px) ;
+    transition: 0.3s;
+
+}
+
+#iemoji img{
+    width: 80px;
+    margin: 0 10px;
+
+}
+.rating{
+    display: flex;
+}
+.rating .fa-star{
+    font-size: 40px;
+    color: #c0c0c0;
+    cursor: pointer;
+}
+
+h1{
+    text-align: center;
+    margin-top: 4%;
+}
+.form-content-section{
+    width: 50%;
+    margin-top: 3%;
+    margin-left: 25%;
+}
+.myclass{
+    width: 50%;
+    margin: 20px 0px 20px 80px;
+}
+
+
+.feedbackModal{
+
+
+display: flex;
+flex-direction: column;
+
+align-items: center;
+}
+
+.feedbackModal i{
+font-size: 50px;
+    color: green;
+}
+
+@media (max-width:799px) {
+
+    .form-section{
+        background:linear-gradient(to left, rgb(255, 197, 197),rgb(157, 240, 255));
+
+    }
+    .feedbackBox{
+        background: #fff;
+        padding: 50px 60px;
+        border-radius: 10px;
+       
+        }
+    .form-content-section{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+
+    .form-group{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .btn-primary{
+        margin-left: 10px;
+    }
+
+    
+}
+
+@media (max-width:477px){
+
+    .form-section{
+        background:linear-gradient(to left, rgb(255, 197, 197),rgb(157, 240, 255));
+
+    }
+    .feedbackBox{
+        background: #fff;
+       
+        }
+    
+    .form-content-section{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+
+    .form-group{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .btn-primary{
+        margin-left: 10px;
+    }
+    .wrapper{
+      display: none;  
+    }
+}
+
+
+
+
+

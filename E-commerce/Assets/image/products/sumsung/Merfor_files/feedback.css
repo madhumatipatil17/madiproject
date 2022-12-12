@@ -1,0 +1,89 @@
+.form-section{
+    /* background:url("../Assets/image/free-shipping.png"); */
+    background:linear-gradient(to left, rgb(255, 197, 197),rgb(157, 240, 255));
+    margin-bottom:-10px ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.feedbackBox{
+background: #fff;
+padding: 50px 100px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.emoji{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+
+}
+#iemoji {
+    display: flex;
+    align-items: center;
+    transform:translateX(-400px) ;
+    transition: 0.3s;
+
+}
+
+#iemoji img{
+    width: 80px;
+    margin: 0 10px;
+
+}
+.rating .fa-star{
+    font-size: 40px;
+    color: #c0c0c0;
+    cursor: pointer;
+}
+
+h1{
+    text-align: center;
+    margin-top: 4%;
+}
+.form-content-section{
+    width: 50%;
+    margin-top: 3%;
+    margin-left: 25%;
+}
+@media screen and (max-width: 600px){
+    .form-content-section{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .form-content-section{
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .form-group{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .btn-primary{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 800px){
+    .form-group{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .btn-primary{
+        margin-left: 20px;
+    }
+}
+.myclass{
+    border-radius: 20px;
+}

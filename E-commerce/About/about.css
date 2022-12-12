@@ -1,0 +1,38 @@
+/* about-header */
+#page-header.about-header {
+    background-image: url("../Assets/image/about.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+}
+
+.headerAbout h2{
+    font-size: xxx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+#about-head{
+    display: flex;
+    align-items: center;
+}
+#about-head img{
+    width: 50%;
+    height: auto;
+}
+#about-head div{
+    padding-left: 40px;
+}
+
+@media (max-width:447px) {
+    #about-head{
+        flex-direction: column;
+    }
+    #about-head img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #about-head div{
+        padding-left: 0px;
+    }
+    
+}

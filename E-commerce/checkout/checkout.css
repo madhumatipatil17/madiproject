@@ -1,0 +1,48 @@
+.order-products{
+    display: flex;
+   flex-direction: column;
+   padding: 10px;
+width: 50%;
+margin-top: 50px;
+
+   
+}
+
+.productsList{
+  display: flex;
+  justify-content: space-between;
+
+  background: #fff;
+  box-shadow: rgb(100 100 111 / 20%) 0 7px 29px 0;
+}
+ 
+
+
+
+.productDetails{
+
+margin-left: 20px;
+}
+.productsList img{
+    width: 150px;
+    /* background: red; */
+    padding: 10px;
+
+}
+
+.productTotal{
+    display: flex;
+    justify-content: space-between;
+    padding-top:10px ;
+    background: #fff;
+    margin-top: 100px;
+    box-shadow:  0 7px 29px 0  rgb(0,0,0,0.2);
+
+
+}
+
+.errorMsg{
+    color: rgb(211, 33, 33);
+    font-size: 16px;
+    font-weight:lighter;
+}

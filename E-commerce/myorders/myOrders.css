@@ -1,0 +1,15 @@
+ 
+
+.card {
+    background-color: #fff ;
+    box-shadow: 2px 4px 15px 0px rgb(255, 255, 255);
+    z-index: 0;
+}
+
+.orderID{
+    cursor: pointer;
+    
+}
+
+
+
